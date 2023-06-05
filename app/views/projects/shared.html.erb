@@ -1,0 +1,82 @@
+
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2><b>Shared Projects </b></h2>
+                    </div>
+                    <div class="col-sm-7">
+                        <a href="<%= new_project_path %>" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Add New Project</span></a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>                       
+                        <th>Description</th>
+                        <th>Created by</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#"> Martins Ake</a></td>
+                        <td>01/2/2023</td>                        
+                        <td>Admin</td>
+
+                    <td style="width: 140px">
+                            <%# <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a> %>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+
+                    <tr>
+                        <td>2</td>
+                        <td><a href="#"> Mohammed Awwal</a></td>
+                        <td>6/2/2023</td>                        
+                        <td>User</td>
+
+                        <td style="width: 140px">
+                            <%# <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a> %>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td><a href="#"> Deborah Andy</a></td>
+                        <td>04/3/2032</td>                        
+                        <td>Admin</td>
+
+                        <td style="width: 140px">
+                            <%# <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a> %>
+                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+
+                    </tr>
+
+                    </tr>                    
+                </tbody>
+            </table>
+
+
+
+            <div class="clearfix">
+                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>     

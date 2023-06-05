@@ -1,0 +1,15 @@
+current directory: /home/awwal/my_basecamp_1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+/home/awwal/.rbenv/versions/3.1.3/bin/ruby -I /home/awwal/.rbenv/versions/3.1.3/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /home/awwal/my_basecamp_1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20221212-42635-x2mm6c sitelibdir\=./.gem.20221212-42635-x2mm6c clean
+
+current directory: /home/awwal/my_basecamp_1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20221212-42635-x2mm6c sitelibdir\=./.gem.20221212-42635-x2mm6c
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/awwal/my_basecamp_1/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20221212-42635-x2mm6c sitelibdir\=./.gem.20221212-42635-x2mm6c install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20221212-42635-x2mm6c/bootsnap

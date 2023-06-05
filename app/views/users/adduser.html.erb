@@ -1,0 +1,60 @@
+
+<div class="container-xl">
+<div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2> <b>Add User </b></h2>
+                </div>                    
+            </div>
+        </div>
+        <div class="signup-form"> 
+        <% if flash[:notice] %>  
+          <div class="alert alert-success"><%= flash[:notice] %></div>  
+        <% end %> 
+
+        <% if flash[:error] %>  
+          <div class="alert alert-warning"><%= flash[:error] %></div>  
+        <% end %>  
+
+        <%= form_with scope: @user, url: add_new_user_path, method: :post, local: true do %>
+        <p class="lead">Register a new user.</p>
+        
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" name="name" placeholder="Name" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
+          </div>
+        </div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>
+      </div>
+      
+      <div class="form-group">
+      <select name="role" class="form-control">
+        <option class="form-input">select role ..</option>
+        <option class="form-input" value="user">User </option>
+        <option class="form-input" value="admin"> Admin </option>
+      </select>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>
+      </div>     
+                  
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Create</button>
+        </div>
+       <% end %> 
+    </div>
+</div>    
+</div> 

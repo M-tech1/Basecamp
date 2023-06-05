@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap Elegant Sign Up Form with Icons</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+  color: #999;
+  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+}
+.form-control, .form-control:focus, .input-group-addon {
+  border-color: #e1e1e1;
+  border-radius: 0;
+}
+.signup-form {
+  width: 390px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.signup-form h2 {
+  color: #18A8D8;
+  margin: 0 0 15px;
+  text-align: center;
+}
+.signup-form .lead {
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.signup-form form {   
+  border-radius: 1px;
+  margin-bottom: 15px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+.signup-form .form-group {
+  margin-bottom: 20px;
+}
+.signup-form label {
+  font-weight: normal;
+  font-size: 13px;
+}
+.signup-form .form-control {
+  min-height: 38px;
+  box-shadow: none !important;
+  border-width: 0 0 1px 0;
+} 
+.signup-form .input-group-addon {
+  max-width: 42px;
+  text-align: center;
+  background: none;
+  border-bottom: 1px solid #e1e1e1;
+  padding-left: 5px;
+}
+.signup-form .btn, .signup-form .btn:active {        
+  font-size: 16px;
+  font-weight: bold;
+  background: #18A8D8 !important;
+  border-radius: 3px;
+  border: none;
+  min-width: 140px;
+}
+.signup-form .btn:hover, .signup-form .btn:focus {
+  background: #18A8D8 !important;
+}
+.signup-form a {
+  color: #18A8D8;
+  text-decoration: none;
+} 
+.signup-form a:hover {
+  text-decoration: underline;
+}
+.signup-form .fa {
+  font-size: 21px;
+  position: relative;
+  top: 8px;
+}
+.signup-form .fa-paper-plane {
+  font-size: 17px;
+}
+.signup-form .fa-check {
+  color: #fff;
+  left: 9px;
+  top: 18px;
+  font-size: 7px;
+  position: absolute;
+}
+</style>
+</head>
+<body>
+
+
+<div class="signup-form"> 
+    <% if flash[:notice] %>  
+        <div class="alert alert-success"><%= flash[:notice] %></div>  
+    <% end %>     
+
+    <h2>COLLABORATE</h2>
+    <p class="lead">a project management tool for developers.</p>
+
+
+
+<form class="new_user" id="new_user" action="/devise/sign_in" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="8m5Zz5u2lf1lfeHdgCU529qS2l9O2qKr3vdQuWsWV2IhUTBvA-PLF8uFNiWbEahmzqCpBV0buFKo7gyXrWC_6Q" autocomplete="off" />
+
+    <%= form_with scope: @user, url: user_session_path, method: :post, local: true do %>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+        <%# <input type="email" class="form-control" name="email" placeholder="Email Address" required="required"> %>
+        <input type="email" class="form-control" name="user[email]" id="user_email"  placeholder="Email Address" required="required">
+        <%# <input autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]" id="user_email" /> %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <%# <input type="text" class="form-control" name="password" placeholder="Password" required="required"> %>
+        <input type="password" class="form-control" name="user[password]" id="user_password" placeholder="Password" required="required">
+        <%# <input autocomplete="current-password" type="password" name="user[password]" id="user_password" /> %>
+      </div>
+    </div>
+         
+    <div class="form-group">
+            <button type="submit" name="commit" value="Log in" data-disable-with="Log in" class="btn btn-primary btn-block btn-lg">Sign in </button>
+    </div>
+
+
+  </div>
+
+</form>
+
+
+
+    <p class="small text-center">By clicking the Sign Up button, you agree to our <br><a href="#">Terms &amp; Conditions</a>, and <a href="#">Privacy Policy</a>.</p>
+    <% end %> </form>
+  <div class="text-center">Dont have an account? <%= link_to "Sign up", new_user_path %> here .</div>
+
+
+</div>
+</body>
+</html>
